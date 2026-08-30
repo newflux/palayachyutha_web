@@ -1,0 +1,219 @@
+/* ═══════════════════════════════════════════════════════ */
+/* FIXED RIGHT SIDEBAR                                    */
+/* ═══════════════════════════════════════════════════════ */
+
+.site-sidebar {
+  position: fixed;
+  right: clamp(1rem, 2.5vw, 2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ─── Sidebar Item (row) ─── */
+.sidebar-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  color: #fff;
+}
+
+.sidebar-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.sidebar-toggle:hover .sidebar-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar-icon {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar-item.open .sidebar-icon {
+  color: rgba(255, 60, 60, 0.8);
+  transform: rotate(45deg);
+}
+
+.sidebar-item.open .sidebar-label {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ─── Expand Content ─── */
+.sidebar-expand {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+}
+
+.sidebar-expand-inner {
+  padding: 0 0.5rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ─── Team Members Grid ─── */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.team-member:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.team-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 60, 60, 0.3), rgba(255, 107, 53, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.team-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* ─── Stats in sidebar ─── */
+.sidebar-stats {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sidebar-stat {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+.sidebar-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  display: block;
+}
+
+.sidebar-stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.45rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* ─── Contact Info ─── */
+.sidebar-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sidebar-contact-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.1em;
+}
+
+/* ─── Pitchdeck ─── */
+.sidebar-pitch-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ─── ASCII decoration between sidebar sections ─── */
+.sidebar-ascii-divider {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 0.25rem 0;
+  user-select: none;
+}
+
+/* ═══════════════════════════════ */
+/* RESPONSIVE                     */
+/* ═══════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .site-sidebar {
+    width: 180px;
+    right: 0.75rem;
+  }
+  .sidebar-label {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-sidebar {
+    display: none;
+  }
+}

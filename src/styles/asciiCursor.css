@@ -1,0 +1,17 @@
+/* ═══════════════════════════════════════════════════════ */
+/* ASCII CURSOR — Global fixed canvas                     */
+/* ═══════════════════════════════════════════════════════ */
+
+#ascii-cursor-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Hide default cursor on interactive areas for immersive feel */
+body {
+  cursor: crosshair;
+}
