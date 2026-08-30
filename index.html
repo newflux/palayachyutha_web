@@ -36,20 +36,20 @@
         <div class="sidebar-expand-inner">
           <div class="team-grid">
             <div class="team-member">
-              <div class="team-avatar">JD</div>
-              <span class="team-name">Dev</span>
+              <div class="team-avatar">SA</div>
+              <span class="team-name">Samanth AR</span>
             </div>
             <div class="team-member">
-              <div class="team-avatar">AR</div>
-              <span class="team-name">Design</span>
+              <div class="team-avatar">SV</div>
+              <span class="team-name">Santosh V</span>
             </div>
             <div class="team-member">
-              <div class="team-avatar">KS</div>
-              <span class="team-name">IoT</span>
+              <div class="team-avatar">TS</div>
+              <span class="team-name">Tushar S</span>
             </div>
             <div class="team-member">
-              <div class="team-avatar">ML</div>
-              <span class="team-name">Model</span>
+              <div class="team-avatar">HP</div>
+              <span class="team-name">Harshith P S</span>
             </div>
           </div>
         </div>
@@ -178,8 +178,8 @@
                 <div class="panel-left">
                   <h3 class="panel-title">Design & Architecture</h3>
                   <p class="panel-desc">System design, architecture diagrams, and technical decisions behind NeuroSync.</p>
-                  <div class="panel-placeholder">
-                    <span>Content coming soon</span>
+                  <div class="panel-placeholder" style="border: none; padding: 0;">
+                    <img src="" alt="System Architecture Placeholder" style="width: 100%; min-height: 200px; height: auto; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.3); display: block;" />
                   </div>
                 </div>
                 <div class="panel-right">
@@ -213,7 +213,7 @@
                   <h3 class="panel-title">Code</h3>
                   <p class="panel-desc">Technical implementation, code highlights, and the tech stack powering the project.</p>
                   <div class="panel-placeholder" style="border: none; background: transparent; padding: 0; min-height: 0; display: block; margin-top: 1.5rem;">
-                    <a href="https://github.com/newflux/palayachyutha_web" target="_blank" style="display: inline-block; padding: 12px 24px; background: #ff3c3c; color: #fff; text-decoration: none; border-radius: 4px; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; transition: opacity 0.2s ease;">VIEW ON GITHUB ↗</a>
+                    <a href="https://github.com/abbursamanth/Palayaachyuta_latentforce" target="_blank" style="display: inline-block; padding: 12px 24px; background: #ff3c3c; color: #fff; text-decoration: none; border-radius: 4px; font-family: var(--font-mono); font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; transition: opacity 0.2s ease;">VIEW ON GITHUB ↗</a>
                   </div>
                 </div>
                 <div class="panel-right">
@@ -272,7 +272,7 @@
         <!-- Footer -->
         <footer class="site-footer">
           <div class="footer-row">
-            <span>© 2026 NeuroSync — Hackathon Project</span>
+            <span>© 2026 PALAYAACHYUTHA TEAM</span>
             <span>Brain Track · IoT × AI</span>
           </div>
         </footer>
@@ -285,7 +285,11 @@
           <div class="results-left">
             <div class="result-slide active" data-result="0">
               <span class="result-index">[ RESULT 01 ]</span>
-              <h3 class="result-title">Real-Time Neural Signal Decoding Accuracy</h3>
+              <div class="result-image-wrapper" style="margin-top: 1.5rem; width: 100%; height: 280px; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.3); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="" alt="Mean Score Image Placeholder" style="max-width: 100%; max-height: 100%; object-fit: cover;" />
+                <span style="font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.5; position: absolute;">Image Placeholder</span>
+              </div>
+              <h3 class="result-title" style="margin-top: 1rem;">Real-Time Neural Signal Decoding Accuracy</h3>
               <div class="result-metric">
                 <span class="result-metric-value">97.3%</span>
                 <span class="result-metric-unit">accuracy</span>
@@ -294,7 +298,11 @@
             </div>
             <div class="result-slide" data-result="1">
               <span class="result-index">[ RESULT 02 ]</span>
-              <h3 class="result-title">Edge Inference Latency &amp; Throughput</h3>
+              <div class="result-image-wrapper" style="margin-top: 1.5rem; width: 100%; height: 280px; border-radius: 8px; border: 1px dashed rgba(255,255,255,0.3); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="" alt="Brain State Image Placeholder" style="max-width: 100%; max-height: 100%; object-fit: cover;" />
+                <span style="font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.5; position: absolute;">Image Placeholder</span>
+              </div>
+              <h3 class="result-title" style="margin-top: 1rem;">Edge Inference Latency &amp; Throughput</h3>
               <div class="result-metric">
                 <span class="result-metric-value">&lt;50ms</span>
                 <span class="result-metric-unit">end-to-end</span>
@@ -307,23 +315,23 @@
             <div class="explanation-slide active" data-result="0">
               <span class="explanation-tag">[ HOW IT WORKS ]</span>
               <h4 class="explanation-heading">Mean Score Calculated</h4>
-              <p class="explanation-body">We trained a compact 1D-CNN on the BCI Competition IV dataset, optimized with quantization-aware training to run natively on a Raspberry Pi 4 with a Coral TPU accelerator.</p>
+              <p class="explanation-body">We have calculated the mean score using our specialized hardware stack in real time. The entire signal processing pipeline runs locally to ensure maximum privacy and minimal latency.</p>
               <ul class="explanation-bullets">
-                <li>4-class motor imagery classification</li>
-                <li>Bandpass filtering (8-30 Hz) for mu/beta rhythms</li>
-                <li>Common Spatial Pattern (CSP) feature extraction</li>
-                <li>TFLite model: 1.2MB, 12ms inference</li>
+                <li>Real-time hardware computation</li>
+                <li>Zero cloud dependency</li>
+                <li>Direct device execution</li>
+                <li>Instant visual feedback</li>
               </ul>
             </div>
             <div class="explanation-slide" data-result="1">
               <span class="explanation-tag">[ ARCHITECTURE ]</span>
               <h4 class="explanation-heading">Brain State Comparison</h4>
-              <p class="explanation-body">The system uses a multi-stage pipeline: raw signal acquisition, real-time preprocessing, on-device inference, BLE-broadcast of decoded commands to any connected actuator.</p>
+              <p class="explanation-body">By directly comparing varying brain states through our hardware sensors, the system identifies distinct cognitive patterns and translates them into actionable data on the fly.</p>
               <ul class="explanation-bullets">
-                <li>OpenBCI Cyton board (8-channel, 250Hz)</li>
-                <li>Raspberry Pi 4 + Google Coral USB Accelerator</li>
-                <li>BLE 5.0 for low-latency command relay</li>
-                <li>WebSocket dashboard for live visualization</li>
+                <li>Continuous state monitoring</li>
+                <li>Live baseline comparisons</li>
+                <li>Dynamic output mapping</li>
+                <li>High-frequency sampling</li>
               </ul>
             </div>
           </div>
